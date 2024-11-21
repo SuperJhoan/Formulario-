@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Payment form example</h1>
+    <form id="payment-form">
+      <div id="error-message" class="error-message"></div>
+      <label for="card">Card #</label>
+      <input type="text" id="card" placeholder="XXXXXXXXXXXXXXXX" maxlength="16" required>
+
+      <label for="cvc">CVC #</label>
+      <input type="text" id="cvc" placeholder="0000" maxlength="4" required>
+
+      <label for="amount">Amount</label>
+      <input type="text" id="amount" placeholder="$ Amount" required>
+
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" placeholder="" required>
+
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" placeholder="" required>
+
+      <label for="city">City</label>
+      <input type="text" id="city" placeholder="" required>
+
+      <label for="state">State</label>
+      <select id="state" required>
+        <option value="" disabled selected>Pick a state</option>
+        <option value="NY">New York</option>
+        <option value="CA">California</option>
+        <option value="TX">Texas</option>
+      </select>
+
+      <label for="postal-code">Postal Code</label>
+      <input type="text" id="postal-code" placeholder="" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Add any notes here." required></textarea>
+
+      <div class="payment-options">
+        <p>We accept:</p>
+        <div class="icons">
+          <img src="visa.png" alt="Visa">
+          <img src="mastercard.png" alt="MasterCard">
+          <img src="amex.png" alt="American Express">
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button type="button" class="cancel">Cancel</button>
+        <button type="submit" class="send">Send</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
